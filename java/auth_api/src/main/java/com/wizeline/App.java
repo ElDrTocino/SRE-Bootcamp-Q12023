@@ -28,7 +28,9 @@ public class App {
     public static Object urlLogin(spark.Request req, spark.Response res) throws Exception {
         Response r;
         String username = req.queryParams("username");
+
         String password = req.queryParams("password");
+
         String token = Methods.generateToken(username, password);
         res.type("application/json");
         if(token != null){
