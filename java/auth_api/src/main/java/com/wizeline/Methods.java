@@ -61,6 +61,8 @@ public class Methods {
   }
 
   private static Optional<User> getUserFromDB(String username) throws SQLException {
+    System.out.println("LogTestMentoria");
+    System.out.println("LogTestMentoria");
     Optional<User> user = Optional.empty();
     Connection connection = DatabaseConnection.getInstance().getConnection();
     String query = "SELECT * FROM users WHERE username = ?";
